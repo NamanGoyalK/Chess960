@@ -1,0 +1,12 @@
+Metric,Software Implementation,FPGA Implementation,Improvement Factor
+Encoding Speed (pos/sec),19712824,150000000,7.6x
+Decoding Speed (pos/sec),18221508,156250,0.0x
+Encoding Latency (μs),0.1,0.0,7.6x
+Decoding Latency (μs),0.1,6.4,0.0x
+Power Consumption (W),3.5,1.8,1.9x
+Logic Elements Used (%),N/A,7.5,N/A
+Memory Utilization (%),N/A,1.6,N/A
+Correctness (%),100.0,100.0,1.0x
+Entropy (bits),0.000,9.84,1.0x
+Steganographic Score,86.5,86.5,1.0x
+Brute Force Time (hours),N/A,2.8e-10,N/A

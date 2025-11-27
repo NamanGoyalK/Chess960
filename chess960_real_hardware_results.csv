@@ -1,0 +1,14 @@
+Metric,Software Implementation,FPGA Implementation (Real),Improvement Factor
+Encoding Speed (pos/sec),15532002,200,77660.0x slower
+Decoding Speed (pos/sec),15290286,99,154447.3x slower
+Encoding Latency (μs),0.1,1.6,0.0x slower
+Decoding Latency (μs),0.1,1.6,0.0x slower
+Success Rate (%),100.0,100.0,1.00x better
+Power Consumption (W),3.5,1.2,2.9x more power
+Clock Frequency (MHz),3000,100,30x faster CPU
+Cycles per Operation,Variable,451,Fixed vs Variable
+Logic Elements Used (%),N/A,6.6,FPGA Optimized
+Memory Utilization (%),N/A,1.6,Hardware Dedicated
+Correctness (%),100.0,100.0,1.00x
+Entropy (bits),0.000,9.83,1.0x
+Steganographic Score,86.6,86.6,1.0x

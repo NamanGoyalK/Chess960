@@ -1,0 +1,61 @@
+# GTKWave save file for Chess960 visualization
+# Save this as chess960_signals.gtkw and load it with: gtkwave chess960_test.vcd chess960_signals.gtkw
+
+# Add clock and control signals
+@28
+comprehensive_testbench.clk
+comprehensive_testbench.reset
+comprehensive_testbench.start_test
+
+# Add test system state machine
+@22
+comprehensive_testbench.test_sys.test_state[3:0]
+
+# Add test data flow
+@23
+comprehensive_testbench.test_sys.test_data[9:0]
+@22
+comprehensive_testbench.test_sys.encoded_position[63:0]
+@23
+comprehensive_testbench.test_sys.decoded_data[9:0]
+
+# Add validity signals
+@28
+comprehensive_testbench.test_sys.encode_valid
+comprehensive_testbench.test_sys.decode_valid
+
+# Add encoder signals
+@23
+comprehensive_testbench.test_sys.encoder.data_in[9:0]
+@22
+comprehensive_testbench.test_sys.encoder.board_out[63:0]
+@28
+comprehensive_testbench.test_sys.encoder.encode_enable
+
+# Add decoder signals
+@22
+comprehensive_testbench.test_sys.decoder.board_in[63:0]
+@23
+comprehensive_testbench.test_sys.decoder.data_out[9:0]
+comprehensive_testbench.test_sys.decoder.search_index[9:0]
+comprehensive_testbench.test_sys.decoder.search_cycles[9:0]
+@28
+comprehensive_testbench.test_sys.decoder.decode_enable
+comprehensive_testbench.test_sys.decoder.searching
+
+# Add test results
+@23
+comprehensive_testbench.test_sys.test_counter[15:0]
+comprehensive_testbench.test_sys.correct_count[31:0]
+comprehensive_testbench.test_sys.error_cnt[31:0]
+
+# Add completion signals
+@28
+comprehensive_testbench.test_complete
+comprehensive_testbench.test_passed
+
+# Add performance monitoring
+@23
+comprehensive_testbench.test_sys.perf_mon.encode_count[31:0]
+comprehensive_testbench.test_sys.perf_mon.decode_count[31:0]
+comprehensive_testbench.test_sys.perf_mon.cycle_count[31:0]
