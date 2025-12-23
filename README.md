@@ -1,41 +1,90 @@
-This project is an innovative approach to data encoding and storage inspired by Fischer Random Chess (Chess960). By leveraging the 960 unique starting positions of Chess960, this model encodes binary data into randomized chessboard configurations, offering enhanced security, scalability, and adaptability.
-* * * 
-## Key Features
+# Resource Efficient FPGA Realization of Chess960 Position Generator
 
-- Randomized Data Encoding: Stores data in Chess960 board setups, introducing a flexible and dynamic structure.
+This repository contains the **hardware and software implementation** of a **Chess960 starting position generator**, as presented in the IEEE SISIMPACT 2025 paper.
 
-- Enhanced Security: Obfuscates data using Chess960 constraints, making it resistant to unauthorized access.
+The work focuses on a **resource efficient FPGA based realization** of Chess960 position generation with **deterministic timing, low power consumption, and minimal logic utilization**, targeting embedded and covert communication systems.
 
-- Scalability: Expands seamlessly by adding new Chess960 board configurations.
+This is **not a full steganographic protocol**. It is a **foundational hardware module**.
 
-- Potential Cryptographic Applications: Uses Chess960 positions as cryptographic keys or seeds.
+---
 
-- Distributed Storage Compatibility: Supports integration into distributed and decentralized networks.
+## What This Project Actually Does
 
-## How It Works
+* Generates **all 960 valid Chess960 starting positions**
+* Deterministic generation from a **10 bit seed 0 to 959**
+* Enforces all Chess960 constraints in hardware
+* Implemented and validated on **Xilinx Zynq 7020 FPGA**
+* Benchmarked against optimized software implementations
 
-- Data Mapping: Each Chess960 board position encodes a 10-bit binary sequence.
+---
 
-- Compression & Encoding: Data is compressed (e.g., Huffman coding) before mapping into board configurations.
+## Key Contributions
 
-- Storage & Retrieval: Encoded Chess960 positions are stored and later decoded back into binary.
+* FPGA based Chess960 position generator
+* **2.17 percent LUT utilization**
+* **0.566 W total power consumption**
+* **Fixed latency of 451 cycles**
+* Deterministic timing suitable for embedded systems
+* Hardware and software performance comparison
 
-- Security & Integrity: Data obfuscation ensures only authorized systems can decode stored information.
+---
+
+## Architecture Overview
+
+* Input interface accepts a 10 bit seed
+* Constraint based position generation logic
+* Finite state control logic
+* Output interface for position formatting
+* Verified via simulation and real hardware deployment
+
+---
 
 ## Use Cases
 
-- Cryptographic Key Generation
+* Embedded steganographic systems
+* Covert communication primitives
+* Hardware based random position generation
+* Cryptographic preprocessing and key derivation research
+* FPGA accelerated chess related systems
 
-- AI Training for Adaptive Systems
+---
 
-- Secure & Distributed Storage Solutions
+## What This Project Does NOT Do
 
-- Algorithmic Optimization & Problem-Solving
+* No full steganographic protocol
+* No encryption or authentication layer
+* No data compression pipeline
+* No distributed storage system
 
-- Challenges & Future Work
+Those are **future work**, not claims.
 
-- Developing efficient encoding/decoding algorithms.
+---
 
-- Reducing storage overhead for small datasets.
+## Paper
 
-- Enhancing integration with existing storage systems.
+**Resource Efficient FPGA Realization of Chess960 Position Generator for Future Covert Communication Systems**
+IEEE SISIMPACT 2025
+
+---
+
+## Citation
+
+If you use this work, **cite the paper**.
+
+### BibTeX
+
+```bibtex
+@inproceedings{goyal2025chess960,
+  title={Resource-Efficient FPGA Realization of Chess960 Position Generator for Future Covert Communication Systems},
+  author={Goyal, Naman and Gogoi, Partha Pratim and Tripathi, Abhishek Narayan and Laskar, Naushad Manzoor},
+  booktitle={2025 IEEE 1st International Conference on Smart Innovations in Systems, Infrastructure, Mechanical, Power, AI and Computing Technologies (SISIMPACT)},
+  year={2025},
+  publisher={IEEE}
+}
+```
+
+---
+
+## License
+
+Apache License 2.0
